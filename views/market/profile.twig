@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="body">
+
+
+{% include 'Templates/navbar.twig' %}
+<br>
+    <h2 class="welcomeUser">Your profile</h2>
+
+<br>
+
+<br>
+<form method="POST" action="/profile" class="mx-auto max-w-md">
+    <label class="block font-bold mb-2 text-gray-700">
+        Your name: {{ userInfo.name }}
+    </label>
+    <label class="block font-bold mb-2 text-gray-700">
+        Current balance: {{ userInfo.balance | number_format(2, '.', ',') }} €
+    </label>
+    <label class="block font-bold mb-2 text-gray-700">
+        Enter amount to increase or decrease balance:
+    </label>
+    <input type="number" step="0.01" name="amount" min="-999999" max="999999" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        Update balance
+    </button>
+</form>
+
+
+
+</body>
+</html>

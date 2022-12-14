@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="body">
+
+
+
+<div class="w-full h-full h-screen bg-gradient-to-b from-cyan-800 to-blue-100 p-4 flex items-center justify-center" >
+    <div class="bg-white py-6 px-10 sm:max-w-md w-full ">
+        <div class="sm:text-3xl text-2xl font-semibold text-center text-sky-600  mb-12">
+            Log In
+        </div>
+        <form action="/" method="post">
+            <div>
+                <input type="email" class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 my-8" id="email" name="email" placeholder="Email Address "/>
+            </div>
+            <div>
+                <input type="password" class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 mb-8" id="password" name="password" placeholder="Password "/>
+            </div>
+            <div class="flex justify-center my-6">
+                <form action="register" >
+                    <input class=" rounded-full  p-3 w-full sm:w-56   bg-cyan-800 text-white text-lg font-semibold " type="submit" value="Log In"/>
+                </form>
+            </div>
+            <div class="flex justify-center ">
+                <p class="text-gray-500">Don't have an account? </p>
+                <a href="/register" class="text-sky-600 pl-2"> Register</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
