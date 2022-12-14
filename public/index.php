@@ -13,16 +13,6 @@ use App\Redirect;
 require_once "../vendor/autoload.php";
 session_start();
 
-/*
- *
-MD
-
-Izmantot nodarbības iegūto, uztaisīt skatu kur var redzēt visu savu stoku apkopojumu,
-būtu labi redzēt savas transakcijas tabula. (jauna tabula ?)
-valet pārskats kautkāds, average gain loss. profil loss table.
- *
- */
-
 
 $dotenv = Dotenv\Dotenv::createImmutable(substr(__DIR__, 0, -7)); // ../ beigas
 $dotenv->load();
