@@ -17,8 +17,6 @@ and set up the required backend PHP code
 
 ## Prerequisites
 
-Before you begin, make sure you have the following requirements installed on your system:
-
 - PHP 7.4 or higher
 - MySQL 8.0.31
 - Composer
@@ -27,6 +25,10 @@ Before you begin, make sure you have the following requirements installed on you
 
 1. Clone this repository to your local machine 
 `git clone https://github.com/NiksKphp/Homework-Crypto-page.git`
+2. Navigate to the project directory and install the project dependencies using Composer:
+`composer install`
+3. SET UP DATABASE
+4. Configure .env_example and rename the file to .env
 
 
 ## Screenshots
