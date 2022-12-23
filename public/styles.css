@@ -1,0 +1,223 @@
+.body {
+    background-color: #ffffff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15%;
+    color: #ffffff;
+}
+
+.articleLogo {
+    width: 64px;
+    height: 64px;
+    margin-left: 40%;
+}
+
+.error {
+    font-size: 15px;
+    color: #d90000;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.error-xl {
+    font-size: 20px;
+    color: #d90000;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card {
+    flex: 1;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #c1cad2;
+}
+
+.pageTitle {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 30px;
+    word-spacing: -3px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    text-align: center;
+}
+
+.searchBarDiv {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.welcomeUser {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 28px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+.bg-gradient-glass {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%), linear-gradient(0deg, rgba(0, 174, 239, 0.3) 0%, rgba(0, 174, 239, 0.05) 100%), #E8F5FE;
+    background-blend-mode: screen;
+}
+
+
+.userBalance {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 25px;
+    word-spacing: -3px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+.loginform {
+    font-size: 35px;
+    text-align: center;
+}
+
+.formField {
+    height: 20px;
+}
+
+.buttonRow {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-top: 20px;
+    word-spacing: 20px;
+}
+
+.topNavBar {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigationButton {
+    background-color: #c1cad2;
+    border-radius: 10px;
+    border: 1px solid green;
+    color: #000000;
+    padding: 10px 24px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.formContainer {
+    border-style: solid;
+    border-radius: 10px;
+    margin: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: slategrey;
+    text-align: center;
+}
+
+.articleContainer {
+    border-style: solid;
+    border-radius: 10px;
+    margin: 30px;
+    background-color: slategrey;
+}
+
+.articleTitle {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 25px;
+    word-spacing: -3px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    text-align: center;
+}
+
+.articleDescription {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 18px;
+    word-spacing: -3px;
+    color: #000000;
+    font-weight: 400;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-indent: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.max-w-md {
+    max-width: 600px;
+}
+
+.articledate {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 14px;
+    word-spacing: -3px;
+    color: #000000;
+    font-weight: 300;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-indent: 25px;
+    margin-left: 70%;
+    margin-bottom: -20px;
+}
+
+.articleImage {
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.articleUrl {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 13px;
+    word-spacing: -3px;
+    color: blue;
+    font-weight: 400;
+    text-decoration: none;
+    font-style: italic;
+    font-variant: normal;
+    text-transform: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+

@@ -1,0 +1,80 @@
+<div class="p-4 items-center justify-center w-[580px] rounded-xl group sm:flex space-x-6 bg-white mb-4 shadow-xl border-solid border-4">
+    <img class="mx-auto w-full block w-40 h-40 rounded-lg" loading="lazy"
+         src='{{ cryptoCurrency.logo }}'/>
+    <div class="sm:w-8/12 pl-0 p-5">
+        <div class="space-y-2">
+            <div class="space-y-4">
+                <h4 class="text-md text-xl font-semibold text-cyan-900 text-justify ">
+                    {{ cryptoCurrency.name }} ({{ cryptoCurrency.symbol }})
+                    <p class="text-md text-xl font-bold text-green-700 ">
+                        {{ cryptoCurrency.price | number_format(2, '.', ',') }} €
+                    </p>
+                    <div class="text-grey-500 flex flex-row my-1">
+                        <p class="text-xs">Last update: {{ cryptoCurrency.lastUpdate | date('d-m-Y') }}</p>
+                    </div>
+                </h4>
+            </div>
+            <div class="flex items-center space-x-4 justify-between">
+                <div class="space-y-1">
+                    <span class="text-sm font-semibold text-cyan-900">Rank: {{ cryptoCurrency.rank }}</span>
+                    <br>
+                    <span class="text-sm font-semibold text-cyan-900">Total volume: {{ cryptoCurrency.totalVolume | round | number_format(0, '.', ',') ~ ' €' }}</span>
+                    <br>
+                    <span class="text-sm font-semibold text-cyan-900">Volume change 24h: {% if cryptoCurrency.volumeChange < 0 %}
+                    <span style="color: red;">{{ cryptoCurrency.volumeChange | number_format(2, '.', ',') ~ '%' }}</span>
+                {% else %}
+                    <span style="color: green;">{{ cryptoCurrency.volumeChange | number_format(2, '.', ',') ~ '%' }}</span>
+                        {% endif %}</p></span>
+                    <br>
+                </div>
+            </div>
+
+            <div class="items-center space-x-2 justify-between">
+                <div class="flex space-x-1">
+                    <form method="POST" action="/buy" id="buy-form">
+                        <span class="text-sm font-semibold text-cyan-900 pr-2">Own: {{ userInventory.values[mySymbol]|default(0) }}</span>
+                        <input type="hidden" name="price" value="{{ cryptoCurrency.price }}"/>
+                        <input type="hidden" name="symbol" value="{{ cryptoCurrency.symbol }}"/>
+                        <input class="border-2 w-32 border-gray-300 bg-white h-6 px-9 rounded-lg text-sm focus:outline"
+                               type="text" name="number" value="1" id="my-number-field-{{ cryptoCurrency.symbol }}" min="0" max="2" onkeydown="if (event.key === '-') { event.preventDefault(); }">
+                        <button class="bg-green-500 shadow-lg shadow-shadow-green-600 text-white cursor-pointer px-3 text-center justify-center items-center py-1 rounded-xl space-x-2"
+                                type="submit">Buy
+                        </button>
+                    </form>
+                    {% if userInventory.values[mySymbol]|default(0) <= 0 %}
+                        <form method="POST" action="/short" id="short-form-{{ cryptoCurrency.symbol }}">
+                            <input type="hidden" name="price" value="{{ cryptoCurrency.price }}"/>
+                            <input type="hidden" name="symbol" value="{{ cryptoCurrency.symbol }}"/>
+                            <input type="hidden" name="number" value=""
+                                   id="hidden-number-field-{{ cryptoCurrency.symbol }}">
+                            <button class="bg-blue-500 shadow-lg shadow-shadow-orange-600 text-white cursor-pointer px-3 text-center justify-center items-center py-1 rounded-xl space-x-2"
+                                    type="submit" onclick="copyNumberField('{{ cryptoCurrency.symbol }}')">Short
+                            </button>
+                        </form>
+                    {% else %}
+                        <form method="POST" action="/sell" id="sell-form-{{ cryptoCurrency.symbol }}">
+                            <input type="hidden" name="price" value="{{ cryptoCurrency.price }}"/>
+                            <input type="hidden" name="symbol" value="{{ cryptoCurrency.symbol }}"/>
+                            <input type="hidden" name="number" value=""
+                                   id="hidden-number-field-{{ cryptoCurrency.symbol }}">
+                            <button class="bg-red-500 shadow-lg shadow-shadow-red-600 text-white cursor-pointer px-3 text-center justify-center items-center py-1 rounded-xl space-x-2"
+                                    type="submit" onclick="copyNumberField('{{ cryptoCurrency.symbol }}')">Sell
+                            </button>
+                        </form>
+                    {% endif %}
+                </div>
+            </div>
+
+
+            <script>
+                function copyNumberField(symbol) {
+                    var numberField = document.getElementById("my-number-field-" + symbol);
+                    var hiddenField = document.getElementById("hidden-number-field-" + symbol);
+                    hiddenField.value = numberField.value;
+                }
+            </script>
+
+
+        </div>
+    </div>
+</div>

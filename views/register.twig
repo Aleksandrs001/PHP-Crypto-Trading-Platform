@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="body">
+
+
+<div class="w-full h-full h-screen bg-gradient-to-b from-cyan-800 to-blue-100 p-4 flex items-center justify-center">
+    <div class="bg-white py-6 px-10 sm:max-w-md w-full ">
+        <div class="sm:text-3xl text-2xl font-semibold text-center text-sky-600  mb-12">
+            Register
+        </div>
+        <form action="/register" method="post">
+            <div>
+                <input type="text" class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500"
+                       id="name" name="name" placeholder="Name "/>
+            </div>
+            <div>
+                <input type="email"
+                       class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 my-8"
+                       id="email" name="email" placeholder="Email Address "/>
+            </div>
+            <div>
+                <input type="password"
+                       class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 mb-8"
+                       id="password" name="password" placeholder="Password "/>
+            </div>
+            <div class="">
+                <input type="password"
+                       class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 mb-8"
+                       id="passwordRepeat" name="passwordRepeat" placeholder="Password repeat "/>
+            </div>
+
+
+
+            {% set avatars = [
+                {
+                    id: 1,
+                    imageUrl: '/avatars/1.png',
+                    name: 'Avatar 1',
+                    selected: false
+                },
+                {
+                    id: 2,
+                    imageUrl: '/avatars/2.png',
+                    name: 'Avatar 2',
+                    selected: false
+                },
+                {
+                    id: 3,
+                    imageUrl: '/avatars/3.png',
+                    name: 'Avatar 3',
+                    selected: false
+                }
+            ] %}
+
+
+
+            <div class="flex justify-center">
+            <p class="text-gray-500">Choose your avatar</p>
+            </div>
+            <div class="flex -mx-2">
+                {% for avatar in avatars %}
+                    <label class="block w-1/3 px-2 rounded-full overflow-hidden cursor-pointer transition duration-200 ease-in-out select-none">
+                        <input type="radio" name="avatar" value="{{ avatar.id }}" class="hidden" {% if avatar.selected %}checked{% endif %}>
+                        <img src="{{ avatar.imageUrl }}" alt="{{ avatar.name }}" class="w-20 h-20 rounded-full object-cover border-8 border-transparent hover:border-blue-300 {% if avatar.selected %}border-blue-500{% endif %} transition duration-200 ease-in-out select-none">
+                    </label>
+                {% endfor %}
+            </div>
+
+            <script>
+                function updateSelection(id) {
+                    // Update the selected property of the avatar objects
+                    for (let avatar of avatars) {
+                        avatar.selected = avatar.id === id;
+                    }
+                }
+            </script>
+
+
+
+            <p class="error">{{ error }}</p>
+
+            <div class="flex justify-center my-6">
+                <form action="register">
+                    <input class=" rounded-full cursor-pointer p-3 w-full sm:w-56   bg-cyan-800 text-white text-lg font-semibold "
+                           type="submit" value="Create Account"/>
+                </form>
+            </div>
+            <div class="flex justify-center ">
+                <p class="text-gray-500">Already have an acount? </p>
+                <a href="/" class="text-sky-600 pl-2"> Sign In</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
