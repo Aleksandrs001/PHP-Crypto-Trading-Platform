@@ -32,7 +32,7 @@ and set up the required backend PHP code
 5. Configure .env_example and rename the file to .env
 
 
-## Gifs && Screenshots
+## Gifs & Screenshots
 
 ### Buying and Selling Crypto Stocks
 ![screenshot-3.png](https://github.com/NiksKphp/Screenshots/blob/main/crypto_buysell.gif)
