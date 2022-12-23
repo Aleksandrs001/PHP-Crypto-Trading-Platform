@@ -25,7 +25,8 @@ Before you begin, make sure you have the following requirements installed on you
 
 ## Installation
 
-1. Clone this repository to your local machine
+1. Clone this repository to your local machine 
+`git clone https://github.com/NiksKphp/Homework-Crypto-page.git`
 
 
 ## Screenshots
