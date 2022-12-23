@@ -20,8 +20,8 @@ and set up the required backend PHP code
 Before you begin, make sure you have the following requirements installed on your system:
 
 - PHP 7.4 or higher
+- MySQL 8.0.31
 - Composer
-- wbeserver?
 
 ## Installation
 
