@@ -27,8 +27,9 @@ and set up the required backend PHP code
 `git clone https://github.com/NiksKphp/Homework-Crypto-page.git`
 2. Navigate to the project directory and install the project dependencies using Composer:
 `composer install`
-3. SET UP DATABASE
-4. Configure .env_example and rename the file to .env
+3. Import the databse.sql
+`mysql -u myuser -p mydatabase < database.sql`
+5. Configure .env_example and rename the file to .env
 
 
 ## Screenshots
