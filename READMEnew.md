@@ -32,13 +32,19 @@ and set up the required backend PHP code
 5. Configure .env_example and rename the file to .env
 
 
-## Screenshots
+## Gifs && Screenshots
 
-### Screenshot 1
-![Screenshot 1](screenshot-1.png)
+### Buying and Selling Crypto Stocks
+![screenshot-3.png](https://github.com/NiksKphp/Screenshots/blob/main/crypto_buysell.gif)
 
-### Screenshot 2
-![Screenshot 2](screenshot-2.png)
+### Shorting a Crypto Stock
+![screenshot-3.png](https://github.com/NiksKphp/Screenshots/blob/main/crypto_short.gif)
 
-### Screenshot 3
-![Screenshot 3](screenshot-3.png)
+### Sending Crypto Stock to Another Account
+![screenshot-3.png](https://github.com/NiksKphp/Screenshots/blob/main/crypto_send.gif)
+
+### Login and Registration Forms
+![screenshot-3.png](https://github.com/NiksKphp/Screenshots/blob/main/crypto_register.gif)
+
+### Transactions Table
+![screenshot-3.png](https://github.com/NiksKphp/Screenshots/blob/main/23_12_4.png)
