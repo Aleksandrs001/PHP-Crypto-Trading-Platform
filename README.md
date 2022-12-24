@@ -1,4 +1,4 @@
-# PHP-Based Cryptocurrency Trading Platform with CoinMarketCap API Integration
+# PHP-Based Cryptocurrency Trading Platform with API Integration
 
 ## Author
 - [Niks Kuprēvičs](https://github.com/NiksKphp)
