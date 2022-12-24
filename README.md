@@ -5,7 +5,7 @@
 
 ## Description
 This platform allows users to buy and sell various cryptocurrencies with real-time pricing information and actual market data
-provided by the coinmarketcap API. The website is designed using Tailwind CSS and features user profiles and
+provided by the API. The website is designed using Tailwind CSS and features user profiles and
 the ability to transfer cryptocurrencies between accounts. The project is built using PHP and utilizes Twig templates
 and PHP-DI for a secure and efficient user experience. The goal of this project was to study how to provide a convenient and user-friendly platform for trading cryptocurrencies 
 and set up the required backend PHP code
