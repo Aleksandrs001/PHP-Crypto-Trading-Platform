@@ -34,8 +34,7 @@ and set up the required backend PHP code
 `mysql -u myuser -p mydatabase < database.sql`
 5. Configure .env_example and rename the file to .env
 
-
-## Gifs & Screenshots
+## Preview
 
 ### Buying and Selling Crypto Stocks
 ![screenshot-3.png](https://github.com/NiksKphp/Screenshots/blob/main/crypto_buysell.gif)
